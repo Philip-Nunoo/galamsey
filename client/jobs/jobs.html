@@ -1,0 +1,21 @@
+<!-- jobs.html -->
+<template name="Jobs">
+	<h5 class="div-title"><i class="fa fa-flask"></i> All available jobs</h5>
+	<div>
+		<div class="jobs">
+			{{#if jobs}}
+			{{#each jobs}}
+			<div class="job">
+				<div class="holder">
+					<div class="title">{{title}} <span class="right type"><button class="{{type}}">{{type}}</button></span></div>
+					<div class="desc">{{description}}</div>
+					<div class="contact"><i class='fa fa-phone-square'></i> {{contact}}</div>
+				</div>
+			</div>
+			{{/each}}
+			{{else}}
+			No Jobs Listed Yet
+			{{/if}}
+		</div>
+	</div>
+</template>

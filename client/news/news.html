@@ -1,0 +1,18 @@
+<!-- news.html -->
+<template name="News">
+	<div>
+		<h5 class="div-title"><i class="fa fa-newspaper-o"></i> Recent News</h5>
+		<div class="news">
+			{{#if news}}
+			{{#each news}}
+			<div class="new">
+				<div class="title">{{title}}</div>
+				<div class="desc">{{description}}</div>
+			</div>
+			{{/each}}
+			{{else}}
+			No News available
+			{{/if}}
+		</div>
+	</div>
+</template>

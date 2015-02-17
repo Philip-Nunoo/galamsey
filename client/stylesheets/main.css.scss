@@ -1,0 +1,259 @@
+/*main.css.scss*/
+@import 'font';
+@import url(http://fonts.googleapis.com/css?family=Poiret+One|Pacifico|Covered+By+Your+Grace|Roboto:400,100,100italic,300,900,700,500);
+
+$font-family: 'Roboto', sans-serif;
+$font-family1: 'Poiret One', cursive;
+$font-family2: 'Pacifico', cursive;
+$font-family3: 'Covered By Your Grace', cursive;
+
+$white: #FFFFFF;
+$border-radius-value: 5px;
+$primary-color: #D62408;
+
+a{
+    color: $primary-color;
+}
+
+body{
+    /*background-color: #dddddd;*/
+    /*background-image: url(http://www.transparenttextures.com/patterns/dimension.png);*/
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    font-weight: 300;
+    font-family: $font-family;
+    font-size: 14px;
+    background-color: #FFF;
+}
+
+input.search {
+    width: 200px;
+    border-radius: 13px;
+    font-size: 12px;
+    height: auto;
+    padding: 5px 12px;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: $font-family;
+    font-weight: 100;
+}
+
+
+.clear{
+    clear: both;
+}
+
+.border-radius{
+    border-radius: $border-radius-value;
+}
+
+.box{
+    padding: 10px;
+    background-color: $white;
+    box-shadow: 0px 1px 1px #AAA;
+    border: 1px solid #BBB;
+    min-height: 95px;
+}
+
+.form{
+    textarea{
+        height: 75px;
+        resize: none;
+        font-size: 13px;
+        line-height: 1.5em;
+    }
+}
+
+/* Jobs */
+.jobs{
+    .job{
+        /*border-bottom: dashed 1px #DDD;*/
+        position: relative;
+        margin-bottom: 40px;
+        .holder{
+            margin: 8px 4px;
+        }
+
+        .title{
+            padding: 6px 12px;
+            font-size: 17px;
+            color: $primary-color;
+            text-transform: uppercase;
+
+            span.type{
+                button{
+                    padding: 0px;
+                    background-color: transparent;
+                    font-size: 11px;
+                    padding: 2px 6px;
+                    font-style: italic;
+                    border-radius: 8%;
+                }
+                .html{
+                    /*border-bottom: blue solid;*/
+                    background-color: blue;
+                }
+
+                .ruby{
+                    /*border-bottom: solid #ef1718;*/
+                    background-color: #ef1718;
+                }
+
+                .meteor{
+                    /*border-bottom: solid #00B22D;*/
+                    background-color: #00B22D;
+                }
+
+                .javascript{
+                    /*border-bottom: solid #FFD520;*/
+                    background-color: #FFD520;
+                }
+
+                .android{
+                    /*border-bottom: solid #FFFFFF;*/
+                    background-color: #FFFFFF;
+                    color: #000;
+                }
+            }
+        }
+
+        .desc{
+        }
+
+        .contact{
+            font-size: 11px;
+        }
+
+        &:after{
+            display: block;
+            content: " ";
+            z-index: 99;
+            position: absolute;
+            border-bottom: 1px solid #CCC;
+            right: 10%;
+            left: 10%;
+            padding: 12px;
+        }
+    }
+}
+
+.navigation{
+    a{
+        display: inline-block;
+        padding: 0px 9px;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+}
+.div-title{
+    color: $primary-color;
+    font-size: 25px;
+    padding: 0px 12px;
+    font-family: 'Roboto';
+    border-bottom: double 3px #DDD;
+    padding-bottom: 10px;
+
+    i {
+        font-size: 150%;
+    }
+}
+
+/* Categories */
+div.categories{
+    margin: 0px;
+    padding: 0px;
+
+    .title{
+        font-size: 27px;
+    }
+
+    a{
+        display: inline-block;
+        color: $primary-color;
+        padding: 2px 4px;
+        font-size: 13px;
+
+        &:after, &:before{
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        &:after{
+            content: " >>";
+        }
+
+        &:before{
+            content: "<< ";
+        }
+    }
+}
+
+#left_side{
+    display: block;
+    text-align: center;
+    position: fixed;
+    width: 20%;
+    /*left: 27px;*/
+    top: 70px;
+    
+    .fa-icons{
+        border-top: 1px solid #DDD;
+        border-bottom:  1px solid #DDD;
+        padding: 5px;
+
+        i{
+            display: inline-block;
+            font-size: 15px;
+            margin: 0px 10px;
+            background-color: $primary-color;
+            color: #FFF;
+            padding: 7px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+    }
+
+    #title{
+        font-size: 60px;
+        font-family: $font-family2;
+
+        a{
+            color: $primary-color;
+
+            &:after{
+                content: "/>";
+                display: inline-block;
+                font-family: 'Roboto';
+                font-weight: 500;
+                color: #FFF;
+                top: -103px;
+                position: relative;
+                z-index: -9;
+                font-weight: bold;
+                font-size: 101px;
+                text-shadow: 0px 0px 3px #000;
+            }
+        }
+        
+    }
+    p{
+        font-weight: 100;
+        color: #666;
+        font-size: 14px;
+    }
+}
+
+#right_side{
+    border-left: 1px solid #DDD;
+    padding: 12px;
+    min-height: 100%;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 7px;
+    background-color: $primary-color;
+    z-index: 100;
+}
