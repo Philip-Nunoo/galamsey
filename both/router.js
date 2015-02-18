@@ -5,13 +5,12 @@ Router.configure({
 });
 
 Router.map(function () {
+	// Home route
 	this.route('home', {
-		// this.render('home');
-		path: '/'
+		path: '/',
 	}),
 	this.route('about',{
 		path: '/about',
-
 	}),
 	this.route('search', {
 		path: '/job/search',
@@ -33,7 +32,13 @@ Router.map(function () {
 	// Archives
 	this.route('archive', {
 		path: '/job/archives'
-	})
+	}),
+	// Create Job
+	this.route('NewJob', {
+		path: '/job/new',
+		name: 'newjob'
+	}),
+	// Not Found
 	this.route('notFound', {
 		path: '*'
 	});

@@ -1,4 +1,18 @@
 <!-- new_job.html -->
-<template name="NewJob">
-New Job
+<template name="Newjob">
+	<h2 class="div-title"><i class="fa fa-plus"></i> New Job</h2>
+	<div>
+		{{#autoForm collection="Jobs" class="form" type="insert"}}
+		<fieldset>
+			<legend><h4>Add a Book</h4></legend>
+			{{> afQuickField name='title'}}
+			{{> afQuickField name='type'}}
+			{{> afQuickField name='summary' rows=6}}
+			{{> afQuickField name='description' rows=7}}
+			{{> afQuickField name='contact'}}
+			{{> afQuickField name='expiryDate'}}
+		</fieldset>
+		<button type="submit" class="btn btn-primary tiny">Insert</button>
+		{{/autoForm}}
+	</div>
 </template>

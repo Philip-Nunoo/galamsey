@@ -1,5 +1,5 @@
 // new_job.js
-Template.NewJob.helpers({
+Template.Newjob.helpers({
 	foo: function () {
 		// ...
 	}

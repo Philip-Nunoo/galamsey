@@ -9,9 +9,9 @@ insecure
 iron:router
 foundation
 particle4dev:sass
-accounts-twitter
 accounts-ui
 matb33:collection-hooks
 mrt:moment
-autopublish
 fortawesome:fontawesome
+aldeed:autoform
+aldeed:collection2

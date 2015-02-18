@@ -25,6 +25,14 @@ body{
     background-color: #FFF;
 }
 
+button{
+    background-color: $primary-color;
+}
+
+input{
+    font-size: 13px !important;
+    height: auto !important;
+}
 input.search {
     width: 200px;
     border-radius: 13px;
@@ -154,6 +162,8 @@ h1, h2, h3, h4, h5, h6{
 
     i {
         font-size: 150%;
+        display: inline-block;
+        margin-right: 40px;
     }
 }
 
@@ -256,4 +266,33 @@ nav{
     height: 7px;
     background-color: $primary-color;
     z-index: 100;
+}
+
+.form{
+    fieldset{
+        border-radius: 5px;
+        background-color: #FAFAFA;
+
+        legend{
+            background-color: transparent;
+        }
+    }
+
+    label{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .has-error{
+        input, textarea{
+            background-color: rgba(200,1,1,0.1);
+            margin-bottom: 0px;
+        }
+
+        span.help-block{
+            color: red;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    }
 }

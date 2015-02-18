@@ -1,5 +1,53 @@
 // jobs.js
 Jobs = new Mongo.Collection('jobs');
+Jobs.attachSchema(new SimpleSchema({
+	title: {
+		type: String,
+		label: "Title",
+		max: 300
+	},
+	type: {
+		type: String,
+		label: 'Type of project',
+	},
+	summary: {
+		type: String,
+		label: "Brief summary",
+		optional: true,
+		max: 1000
+	},
+	description: {
+		type: String,
+		label: "Description of project",
+		optional: false
+	},
+	contact: {
+		type: String,
+		label: "Phone contact",
+		max: 14
+	},
+	expiryDate: {
+		type: Date,
+		label: "Last date this book was checked out",
+		optional: false
+	}
+}));
+
+
+	/*createdAt: {
+		type: Date,
+		label: 'Date created'
+	},*/
+Jobs.before.insert(function (userId, doc) {
+	// if (Meteor.user==null) { // Validating that a user is inserted
+	// 	alert("Please sign in to continue");
+	// 	return false;
+	// };
+	console.log('hell');
+	doc.createdAt = Date.now();
+	return true;
+});
+
 /*jobs = [
 	{title: "Job 1", type: 'html', description: "This is the  job", contact: "(+233)234433128"},
 	{title: "Job 2", type: 'ruby', description: "This is the  job", contact: "(+233)234433128"},

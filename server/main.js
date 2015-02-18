@@ -1,24 +1,21 @@
-Meteor.startup(function() {
-
-	return Meteor.methods({
-
-		removeAllMessages: function() {
-			return Messages.remove({});
-		}
-
-	});
-
+Meteor.publish('jobs', function(limit) {
+	return Jobs.find({}, {sort: {createdAt: -1}});
 });
+// Meteor.startup(function() {
+
+// 	return Meteor.methods({
+
+// 		removeAllMessages: function() {
+// 			return Messages.remove({});
+// 		}
+
+// 	});
+
+// });
 
 // Publishing messages
-/*Meteor.publish('messages', function(limit) {
-  if (limit > Messages.find().count()) {
-    limit = 0;
-  }
 
-  return Messages.find({ }, { limit: limit });
-});
-
+/*
 // Publishing replies
 Meteor.publish('replies', function(limit) {
 	return Replies.find();
